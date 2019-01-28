@@ -61,7 +61,7 @@ def main():
         result = os.popen(
             'nvidia-smi --query-gpu=memory.total,memory.used --format=csv,nounits,noheader'
             ).read().split('\n')
-        print('\rupdated gpu mem:', result) 
+        print('updated gpu mem:', result, end='\r') 
 
 
 if __name__ == '__main__':
